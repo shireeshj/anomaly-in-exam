@@ -17,6 +17,7 @@ This project implements a hybrid approach combining unsupervised and supervised 
 - `simple_cheating_detector.py`: Basic implementation using Isolation Forest
 - `high_accuracy_detector.py`: Enhanced implementation with Random Forest
 - `layman_visualization.py`: Creates intuitive visualizations for non-technical users
+- `synchronized_cheating_detector.py`: Detects synchronized answering patterns across users
 - `requirements.txt`: List of required packages
 
 ## Features
@@ -48,6 +49,9 @@ The most important features for detecting cheating are:
 4. Average time spent per question
 5. Time ratio between correct and incorrect answers
 6. Time consistency
+7. Synchronized answering patterns
+8. Average cluster size in synchronized patterns
+9. Duration of synchronized answering sessions
 
 ## Usage
 
@@ -90,9 +94,10 @@ This exceeds the original target of 95% accuracy and ensures that all cheating c
 
 ## Methods
 
-The project implements two main approaches:
+The project implements several approaches:
 1. **Unsupervised Learning**: Isolation Forest for anomaly detection
 2. **Supervised Learning**: Random Forest classifier for enhanced accuracy
+3. **Synchronized Pattern Detection**: Identifies groups of users answering the same questions at approximately the same time with the same answers, which may indicate organized cheating
 
 The hybrid approach combines these methods to achieve superior results.
 
